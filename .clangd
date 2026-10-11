@@ -1,0 +1,19 @@
+# vim: ft=yaml
+# https://clangd.llvm.org/config
+
+CompileFlags:
+    Add: [-xc++, -std=c++23, -Wpedantic, -Wall, -Wextra, -Wconversion, -Wsign-conversion, -Wshadow]
+    Compiler: clang++
+
+Diagnostics:
+   UnusedIncludes: None
+
+InlayHints:
+  Enabled: false
+
+---
+
+If:
+  PathMatch: [.*\.h, .*\.c]
+CompileFlags:
+  Add: [-xc]
